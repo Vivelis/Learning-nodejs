@@ -7,3 +7,16 @@ My way to learn nodejs.
 ## Cool things
 #### Nodemon
 Nodemon allow you to update the http when you save your js file.
+
+## How to lauch server
+1. Open two terminals.
+2. Start Frontend
+```bash
+cd frontend
+npm start index
+```
+3. Start Backend
+```bash
+cd backend
+nodemon server
+```
