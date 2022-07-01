@@ -2,10 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const stuffRoutes = require('./routes/stuff');
+const mongoSecret = require('./mongoDB_secret');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://Viveli:iN4cVE2dHK3i9WP@cluster0.bdzwq3q.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(mongoSecret,
   { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
